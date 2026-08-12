@@ -1,0 +1,156 @@
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact-section {
+  max-width: 1400px;
+
+  min-height: 75vh;
+
+  margin: 0 auto;
+
+  padding: 130px 32px 80px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* CONTENT */
+
+.contact-content {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+/* MESSAGE */
+
+.contact-message h2 {
+  margin: 0;
+
+  color: var(--text-main);
+
+  font-size: clamp(65px, 8vw, 125px);
+  font-weight: 700;
+
+  line-height: 0.86;
+  letter-spacing: -0.06em;
+}
+
+.contact-message h2 span {
+  display: block;
+
+  color: var(--ice-dark);
+}
+
+.contact-message p {
+  max-width: 520px;
+
+  margin: 35px 0 0;
+
+  color: var(--text-muted);
+
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+
+/* LINKS */
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+.contact-social {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(140, 191, 197, 0.18);
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 25px rgba(24, 35, 38, 0.05);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.contact-social svg {
+  width: 28px;
+  height: 28px;
+}
+
+.contact-social:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(24, 35, 38, 0.10);
+}
+
+/* Gmail */
+
+.contact-social.gmail {
+  color: #EA4335;
+}
+
+
+/* LinkedIn */
+
+.contact-social.linkedin {
+  color: #0A66C2;
+}
+
+
+/* GitHub */
+
+.contact-social.github {
+  color: #181717;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .contact-section {
+    min-height: auto;
+
+    padding:
+      100px
+      22px
+      70px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+    padding-top: 60px;
+  }
+
+  .contact-links {
+    max-width: 400px;
+  }
+}
