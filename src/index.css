@@ -58,7 +58,7 @@ body {
 
   color: var(--text-main);
 
-  font-size: clamp(80px, 10vw, 150px);
+  font-size: clamp(72px, 10vw, 120px);
   font-weight: 700;
 
   line-height: 0.86;
