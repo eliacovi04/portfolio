@@ -164,7 +164,7 @@ h1 {
 
   gap: 8px;
 
-  padding: 8px 10px;
+  padding: 3px 7px;
 
   background: rgba(243, 248, 249, 0.92);
 
@@ -230,7 +230,7 @@ h1 {
   background: transparent;
 
   border-radius: 999px;
-
+  font-size: 13px;
   font-weight: 500;
   text-decoration: none;
 
@@ -286,11 +286,11 @@ h1 {
    ========================= */
 
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   max-width: 1400px;
 
   margin: 0 auto;
-  padding: 115px 32px 85px;
+  padding: 30px 32px 28px;
 
   display: flex;
   flex-direction: column;
@@ -308,7 +308,7 @@ h1 {
 
   color: var(--text-muted);
 
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 
   letter-spacing: 0.14em;
@@ -322,7 +322,7 @@ h1 {
 
   color: var(--text-main);
 
-  font-size: clamp(70px, 10vw, 150px);
+  font-size: clamp(70px, 10vw, 100px);
   font-weight: 700;
 
   line-height: 0.88;
@@ -349,7 +349,7 @@ h1 {
 
   color: var(--ice-dark);
 
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
 
   letter-spacing: 0.13em;
@@ -456,7 +456,7 @@ h1 {
 .node-label {
   color: var(--text-muted);
 
-  font-size: 12px;
+  font-size: 9px;
   font-weight: 600;
 
   letter-spacing: 0.13em;
@@ -474,7 +474,7 @@ h1 {
 
   color: var(--text-muted);
 
-  font-size: 20px;
+  font-size: 13px;
   font-weight: 600;
 
   letter-spacing: 0.11em;
@@ -495,7 +495,7 @@ h1 {
 
   color: #96a9ac;
 
-  font-size: clamp(58px, 8vw, 120px);
+  font-size: clamp(70px, 8vw, 100px);
   font-weight: 700;
 
   line-height: 0.88;
