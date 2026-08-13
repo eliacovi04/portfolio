@@ -5,12 +5,13 @@
 .about-section {
   max-width: 1400px;
   margin: 0 auto;
-
   padding: 120px 32px 150px;
 }
 
 
-/* MAIN LAYOUT */
+/* =========================
+   MAIN LAYOUT
+   ========================= */
 
 .about-main {
   margin-top: 80px;
@@ -23,7 +24,10 @@
   align-items: start;
 }
 
-/* PHOTO */
+
+/* =========================
+   PHOTO
+   ========================= */
 
 .about-photo {
   position: relative;
@@ -59,46 +63,12 @@
 }
 
 
-/* RIGHT SIDE */
+/* =========================
+   RIGHT SIDE
+   ========================= */
 
 .about-info {
   padding-top: 15px;
-}
-
-.about-manifesto p {
-  margin: 0;
-
-  color: var(--text-main);
-
-  font-size: clamp(30px, 4.3vw, 50px);
-  font-weight: 700;
-
-  line-height: 0.95;
-  letter-spacing: -0.05em;
-}
-
-.about-manifesto span {
-  color: var(--ice-dark);
-}
-
-.about-text {
-  max-width: 650px;
-
-  margin-top: 55px;
-}
-
-.about-text p {
-  margin: 0 0 25px;
-
-  color: var(--text-muted);
-
-  font-size: 15px;
-  line-height: 1.75;
-}
-
-.about-text strong {
-  color: var(--text-main);
-  font-weight: 650;
 }
 
 
@@ -109,10 +79,10 @@
 
   color: var(--text-main);
 
-  font-size: clamp(38px, 4.6vw, 70px);
+  font-size: clamp(30px, 4vw, 52px);
   font-weight: 700;
 
-  line-height: 0.96;
+  line-height: 0.95;
   letter-spacing: -0.05em;
 }
 
@@ -125,14 +95,15 @@
 
 .about-text {
   max-width: 650px;
+  margin-top: 55px;
 }
 
 .about-text p {
-  margin: 0 0 26px;
+  margin: 0 0 25px;
 
   color: var(--text-muted);
 
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.75;
 }
 
@@ -142,12 +113,14 @@
 }
 
 .about-closing {
-  color: var(--ice-dark) !important;
+  color: var(--ice-dark);
   font-weight: 600;
 }
 
 
-/* FOCUS AREAS */
+/* =========================
+   FOCUS AREAS
+   ========================= */
 
 .about-focus {
   margin-top: 80px;
@@ -211,7 +184,9 @@
 }
 
 
-/* INTERESTS */
+/* =========================
+   INTERESTS
+   ========================= */
 
 .beyond-grid {
   display: grid;
@@ -262,7 +237,6 @@
 
   .about-main {
     grid-template-columns: 1fr;
-
     gap: 55px;
   }
 
@@ -272,6 +246,18 @@
 
   .beyond-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 900px) {
+
+  .about-photo {
+    max-width: 520px;
+  }
+
+  .about-photo img {
+    height: 580px;
   }
 }
 
@@ -289,13 +275,16 @@
     margin-top: 55px;
   }
 
+  .about-manifesto p {
+    font-size: 34px;
+  }
+
   .about-text p {
     font-size: 16px;
   }
 
   .about-focus {
     flex-direction: column;
-
     gap: 14px;
   }
 
@@ -305,22 +294,5 @@
 
   .beyond-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-
-  .about-main {
-    grid-template-columns: 1fr;
-
-    gap: 55px;
-  }
-
-  .about-photo {
-    max-width: 520px;
-  }
-
-  .about-photo img {
-    height: 580px;
   }
 }
