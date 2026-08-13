@@ -194,7 +194,7 @@ function App() {
 
               <div className="education-heading">
                 <span>02.1 / EDUCATION</span>
-                <h3>EDUCATION.</h3>
+                <h3>EDUCATION</h3>
               </div>
 
               <div className="education-list">

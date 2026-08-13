@@ -58,7 +58,7 @@ body {
 
   color: var(--text-main);
 
-  font-size: clamp(72px, 10vw, 120px);
+  font-size: clamp(70px, 10vw, 90px);
   font-weight: 700;
 
   line-height: 0.86;
@@ -665,8 +665,8 @@ h1 {
 .experience-card {
   position: relative;
 
-  width: min(720px, 78%);
-  min-height: 300px;
+  width: min(600px, 78%);
+  min-height: 200px;
 
   padding: 24px 28px 28px;
 
@@ -727,7 +727,7 @@ h1 {
 .experience-date {
   color: var(--text-muted);
 
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 650;
 
   letter-spacing: 0.1em;
@@ -759,7 +759,7 @@ h1 {
 
   color: var(--text-main);
 
-  font-size: clamp(40px, 3vw, 45px);
+  font-size: clamp(25px, 3vw, 30px);
   font-weight: 650;
 
   line-height: 0.98;
@@ -773,7 +773,7 @@ h1 {
 
   color: var(--text-muted);
 
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.7;
 }
 
@@ -871,9 +871,8 @@ h1 {
 
   margin-bottom: 14px;
 
-  color: var(--ice-dark);
 
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 0.15em;
@@ -934,7 +933,7 @@ h1 {
 
   color: var(--text-main);
 
-  font-size: clamp(30px, 3vw, 40px);
+  font-size: clamp(20px, 3vw, 25px);
   font-weight: 650;
 
   line-height: 1;
@@ -946,7 +945,7 @@ h1 {
 
   color: var(--ice-dark);
 
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
 
   line-height: 1.5;

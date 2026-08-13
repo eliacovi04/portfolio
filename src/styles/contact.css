@@ -37,7 +37,7 @@
 
   color: var(--text-main);
 
-  font-size: clamp(65px, 8vw, 125px);
+  font-size: clamp(50px, 8vw, 80px);
   font-weight: 700;
 
   line-height: 0.86;
@@ -57,7 +57,7 @@
 
   color: var(--text-muted);
 
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.7;
 }
 
