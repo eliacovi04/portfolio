@@ -4,6 +4,7 @@ import aboutPhoto from './assets/elia_about.jpg'
 import './styles/contact.css'
 import './styles/aboutme.css'
 import './styles/skills.css'
+import './styles/projects.css'
 import { SiGmail } from 'react-icons/si'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 function App() {
@@ -132,6 +133,171 @@ function App() {
           </a>
         </section>
 
+        <section id="projects" className="projects-section">
+
+          <div className="section-label">
+            <span>01 /</span>
+            <span>PROJECTS</span>
+          </div>
+
+          <div className="section-line" />
+
+          <h2 className="projects-title">PROJECTS</h2>
+
+
+          <article className="project-card">
+
+            {/* TOP */}
+            <div className="project-card-top">
+              <span>01 / UNITS RACING TEAM</span>
+              <span>October 2025 — PRESENT</span>
+            </div>
+
+
+            {/* HEADER */}
+            <div className="project-header">
+
+              <div>
+                <span className="project-name">FORMULA SAE VEHICLE TELEMETRY SYSTEM</span>
+
+                <h3>
+                  BORIS
+                </h3>
+              </div>
+
+              <span className="project-role">
+                EMBEDDED SOFTWARE DEVELOPER
+              </span>
+
+            </div>
+
+
+            {/* DESCRIPTION */}
+            <p className="project-description">
+              Embedded telemetry software running on the vehicle's Raspberry Pi.
+              BORIS acquires raw data from the electronic boards, converts byte
+              streams into structured telemetry, persists them into a session
+              database and makes the data available to the visualization client.
+            </p>
+
+
+            {/* DETAILS */}
+            <div className="project-details">
+
+              <div className="project-detail-block">
+
+                <span className="project-detail-label">
+                  MY CONTRIBUTION
+                </span>
+
+                <p className="project-contribution-text">
+                  I contributed to the database architecture and developed board-specific
+                  devices that map incoming byte arrays into structured entities, following
+                  the C data structures defined by the firmware team. I also worked on the
+                  database writing pipeline that persists the decoded data.
+                </p>
+              </div>
+
+            </div>
+
+
+            {/* BOTTOM */}
+            <div className="project-bottom">
+
+              <div className="project-stack">
+                <span>C#</span>
+                <span>.NET</span>
+                <span>RASPBERRY PI</span>
+                <span>SQLITE</span>
+                <span>EF CORE</span>
+              </div>
+
+              <span className="project-status">
+                STATUS: VEHICLE INTEGRATION & TESTING
+              </span>
+
+            </div>
+
+          </article>
+
+          <article className="project-card">
+
+            {/* TOP */}
+            <div className="project-card-top">
+              <span>02 / UNITS NEXUS ROBOTICS</span>
+              <span>July 2026 — PRESENT</span>
+            </div>
+
+
+            {/* HEADER */}
+            <div className="project-header">
+
+              <div>
+                <span className="project-name">6-DOF ROBOTIC ARM CONTROL SYSTEM</span>
+
+                <h3>
+                  ROBOT NAME
+                </h3>
+              </div>
+
+              <span className="project-role">
+                ROBOTICS SOFTWARE DEVELOPER
+              </span>
+
+            </div>
+
+
+            {/* DESCRIPTION */}
+            <p className="project-description">
+              Early-stage development of a 6-DOF robotic arm designed as a learning
+              platform for robotic motion and control. The system uses a Raspberry Pi
+              to receive target poses from a client, compute the corresponding joint
+              angles and translate them into physical motor commands.
+            </p>
+
+
+            {/* DETAILS */}
+            <div className="project-details">
+
+              <div className="project-detail-block">
+
+                <span className="project-detail-label">
+                  MY CONTRIBUTION
+                </span>
+
+                <p className="project-contribution-text">
+                  I am working on the software layer that translates target poses into
+                  physical arm movement. So far, I have studied the motor vendor's
+                  public codebase, developed test scripts for motor actuation and
+                  successfully tested individual motor movement. I am also beginning
+                  to work on inverse kinematics, with the goal of converting desired
+                  end-effector poses into joint angles that can be sent to the motors.
+                </p>
+              </div>
+
+            </div>
+
+
+            {/* BOTTOM */}
+            <div className="project-bottom">
+
+              <div className="project-stack">
+                <span>PYTHON</span>
+                <span>RASPBERRY PI</span>
+                <span>ROBOTICS</span>
+                <span>INVERSE KINEMATICS</span>
+              </div>
+
+              <span className="project-status">
+                STATUS: EARLY DEVELOPMENT
+              </span>
+
+            </div>
+
+          </article>
+
+        </section>
+
         <section className="experience-section" id="experience">
           <div className="section-header">
             <span className="section-index">02 / EXPERIENCE</span>
@@ -152,7 +318,7 @@ function App() {
 
               <div className="experience-card-body">
                 <span className="experience-type">
-                  NEXUS ROBOTICS TEAM
+                  UNITS NEXUS ROBOTICS
                 </span>
 
                 <h3>ROBOTICS SOFTWARE DEVELOPER</h3>
