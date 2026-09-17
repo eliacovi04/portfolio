@@ -1,5 +1,5 @@
 :root {
-  --bg-main: #e5e7e7;
+  --bg-main: #c7d7d7;
   --bg-soft: #edf1f1;
 
   --text-main: #182022;
@@ -281,6 +281,129 @@ h1 {
   outline: 2px solid var(--ice);
   outline-offset: 2px;
 }
+
+/* =========================
+   MOBILE MENU
+   ========================= */
+
+.mobile-menu-button,
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 700px) {
+
+  /* Nasconde la navigazione desktop */
+
+  .navbar-links {
+    display: none;
+  }
+
+
+  /* Barra superiore */
+
+  .navbar-inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+
+  /* EC */
+
+  .navbar-brand {
+    font-size: 13px;
+  }
+
+
+  /* MENU / CLOSE */
+
+  .mobile-menu-button {
+    display: block;
+
+    padding: 0;
+
+    background: none;
+    border: none;
+
+    color: var(--text-main);
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+    cursor: pointer;
+  }
+
+
+  /* Menu espanso */
+
+  .mobile-menu {
+    display: flex;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px 18px 30px;
+
+    flex-direction: column;
+
+    background: rgba(245, 248, 247, 0.96);
+
+    border-bottom: 1px solid var(--line);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+
+    border-radius: 28px 28px 28px 28px;
+  }
+
+
+  /* Menu aperto */
+
+  .mobile-menu.mobile-menu-open {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+
+  /* Link */
+
+  .mobile-menu a {
+    padding: 15px 0;
+
+    color: var(--text-main);
+
+    border-bottom: 1px solid var(--line);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-decoration: none;
+  }
+
+
+  .mobile-menu a:last-child {
+    border-bottom: none;
+  }
+
+}
+
 /* =========================
    HERO
    ========================= */
@@ -493,7 +616,7 @@ h1 {
 .hero-field {
   margin: 55px 0 0;
 
-  color: #96a9ac;
+  color: #819194;
 
   font-size: clamp(70px, 8vw, 100px);
   font-weight: 700;
@@ -665,7 +788,7 @@ h1 {
 .experience-card {
   position: relative;
 
-  width: min(600px, 78%);
+  width: min(px, 78%);
   min-height: 200px;
 
   padding: 24px 28px 28px;
@@ -812,14 +935,27 @@ h1 {
 
 @media (max-width: 850px) {
 
-  .experience-cards {
-    grid-template-columns: 1fr;
+  .section-title-row h2 {
+  font-size: clamp(50px, 13vw, 60px);
+  letter-spacing: -0.055em;
   }
 
   .experience-card {
+    width: 94%;
     min-height: 350px;
 
+    margin-left: 0;
+    margin-right: 0;
+
     border-radius: 28px;
+  }
+
+  .experience-card:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  .experience-card:nth-child(even) {
+    margin-right: 0;
   }
 }
 
@@ -987,6 +1123,11 @@ h1 {
 
   .education-block {
     margin-top: 90px;
+  }
+
+  .education-heading h3 {
+  font-size: clamp(50px, 13vw, 60px);
+  letter-spacing: -0.055em;
   }
 
   .education-item {

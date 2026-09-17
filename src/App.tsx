@@ -7,9 +7,12 @@ import './styles/skills.css'
 import './styles/projects.css'
 import { SiGmail } from 'react-icons/si'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
+
+
 function App() {
 
   const [activeSection, setActiveSection] = useState('home')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const sectionIds = [
@@ -61,20 +64,99 @@ function App() {
 
       <nav className="navbar">
         <div className="navbar-inner">
-          <a className="navbar-brand" href="#home">
+
+          <a
+            className="navbar-brand"
+            href="#home"
+            onClick={() => setMobileMenuOpen(false)}
+          >
             EC
           </a>
 
+          {/* DESKTOP NAVIGATION */}
           <div className="navbar-links">
-            <a href="#home"
-            className={activeSection === 'home' ? 'active' : ''}
-            >HOME</a>
-            <a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>PROJECTS</a>
-            <a href="#experience" className={activeSection === 'experience' ? 'active' : ''}>EXPERIENCE</a>
-            <a href="#skills" className={activeSection === 'skills' ? 'active' : ''}>SKILLS</a>
-            <a href="#about" className={activeSection === 'about' ? 'active' : ''}>ABOUT ME</a>
-            <a href="#contact" className={activeSection === 'contact' ? 'active' : ''}>CONTACT</a>
+            <a
+              href="#home"
+              className={activeSection === 'home' ? 'active' : ''}
+            >
+              HOME
+            </a>
+
+            <a
+              href="#projects"
+              className={activeSection === 'projects' ? 'active' : ''}
+            >
+              PROJECTS
+            </a>
+
+            <a
+              href="#experience"
+              className={activeSection === 'experience' ? 'active' : ''}
+            >
+              EXPERIENCE
+            </a>
+
+            <a
+              href="#skills"
+              className={activeSection === 'skills' ? 'active' : ''}
+            >
+              SKILLS
+            </a>
+
+            <a
+              href="#about"
+              className={activeSection === 'about' ? 'active' : ''}
+            >
+              ABOUT ME
+            </a>
+
+            <a
+              href="#contact"
+              className={activeSection === 'contact' ? 'active' : ''}
+            >
+              CONTACT
+            </a>
           </div>
+
+          {/* MOBILE MENU BUTTON */}
+          <button
+            className="mobile-menu-button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-label="Toggle navigation menu"
+          >
+            {mobileMenuOpen ? 'CLOSE' : 'MENU'}
+          </button>
+
+        </div>
+
+        {/* MOBILE NAVIGATION */}
+        <div
+          className={`mobile-menu ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}
+        >
+          <a href="#home" onClick={() => setMobileMenuOpen(false)}>
+            HOME
+          </a>
+
+          <a href="#projects" onClick={() => setMobileMenuOpen(false)}>
+            PROJECTS
+          </a>
+
+          <a href="#experience" onClick={() => setMobileMenuOpen(false)}>
+            EXPERIENCE
+          </a>
+
+          <a href="#skills" onClick={() => setMobileMenuOpen(false)}>
+            SKILLS
+          </a>
+
+          <a href="#about" onClick={() => setMobileMenuOpen(false)}>
+            ABOUT ME
+          </a>
+
+          <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
+            CONTACT
+          </a>
         </div>
       </nav>
 
@@ -146,6 +228,28 @@ function App() {
 
 
           <article className="project-card">
+
+            {/* MOBILE VERSION */}
+            <div className="project-mobile">
+              <span className="project-mobile-index">
+                01 / UNITS RACING TEAM
+              </span>
+
+              <h3>BORIS</h3>
+
+              <span className="project-mobile-name">
+                FORMULA SAE VEHICLE TELEMETRY SYSTEM
+              </span>
+
+              <p>
+                Embedded telemetry system for real-time vehicle data
+                acquisition, decoding and persistence.
+              </p>
+
+              <span className="project-mobile-link">
+                VIEW PROJECT →
+              </span>
+            </div>
 
             {/* TOP */}
             <div className="project-card-top">
@@ -221,6 +325,28 @@ function App() {
           </article>
 
           <article className="project-card">
+
+            {/* MOBILE VERSION */}
+              <div className="project-mobile">
+                <span className="project-mobile-index">
+                  02 / UNITS NEXUS ROBOTICS
+                </span>
+
+                <h3>ICARO</h3>
+
+                <span className="project-mobile-name">
+                  6-DOF ROBOTIC ARM CONTROL SYSTEM
+                </span>
+
+                <p>
+                  Software for kinematics, motion control and physical
+                  actuation of a 6-DOF robotic arm.
+                </p>
+
+                <span className="project-mobile-link">
+                  VIEW PROJECT →
+                </span>
+              </div>
 
             {/* TOP */}
             <div className="project-card-top">
@@ -478,21 +604,6 @@ function App() {
 
             </div>
 
-
-            <div className="skill-capsule soft-skills-capsule">
-
-              <div className="soft-skills-header">
-                <span>03</span>
-                <h3>SOFT SKILLS</h3>
-              </div>
-
-              <div className="soft-skills-words">
-                <span>TEAMWORK</span>
-                <span>PROBLEM SOLVING</span>
-                <span>ADAPTABILITY</span>
-              </div>
-
-            </div>
 
           </div>
 

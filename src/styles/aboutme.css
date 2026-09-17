@@ -267,7 +267,7 @@
   .about-section {
     padding:
       95px
-      22px
+      10px
       110px;
   }
 
@@ -277,6 +277,11 @@
 
   .about-manifesto p {
     font-size: 34px;
+  }
+
+  .about-text {
+    width: 100%;
+    max-width: none;
   }
 
   .about-text p {

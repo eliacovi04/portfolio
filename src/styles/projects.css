@@ -292,8 +292,12 @@
 }
 
 /* =========================
-   RESPONSIVE
+   MOBILE PROJECTS CARD
    ========================= */
+
+.project-mobile {
+  display: none;
+}
 
 @media (max-width: 900px) {
 
@@ -317,7 +321,7 @@
   .projects-section {
     padding:
       95px
-      22px
+      3px
       110px;
   }
 
@@ -326,7 +330,7 @@
   }
 
   .project-card {
-    padding: 28px 22px;
+    padding: 32px 20px;
 
     border-radius: 30px;
   }
@@ -347,7 +351,7 @@
       0
       40px;
 
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .pipeline-flow {
@@ -365,5 +369,103 @@
     align-items: flex-start;
     flex-direction: column;
   }
+
+  .project-detail-block {
+  padding: 24px 18px;
+  }
+  
+  .project-contribution-text {
+  max-width: none;
+  width: 100%;
+  }
+
+  .project-contribution-text {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+  .project-card-top,
+  .project-header,
+  .project-description,
+  .project-details,
+  .project-bottom {
+    display: none;
+  }
+
+  .project-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+    .project-card {
+    padding: 26px 22px;
+    border-radius: 28px;
+  }
+
+  .project-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-mobile-index {
+    margin-bottom: 32px;
+
+    color: var(--ice-dark);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+  }
+
+  .project-mobile h3 {
+    margin: 0 0 8px;
+
+    color: var(--text-main);
+
+    font-size: 36px;
+    font-weight: 700;
+
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+  }
+
+  .project-mobile-name {
+    color: var(--ice-dark);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+  }
+
+  .project-mobile p {
+    margin: 28px 0 32px;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .project-mobile-link {
+    padding-top: 18px;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--text-main);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+  }
+
 
 }
