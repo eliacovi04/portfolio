@@ -8,6 +8,7 @@ import './styles/projects.css'
 import { SiGmail } from 'react-icons/si'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import borisProject from './assets/boris_project.png'
+import icaroProject from './assets/Icaro_project.png'
 
 
 function App() {
@@ -370,7 +371,7 @@ function App() {
                 <span className="project-name">6-DOF ROBOTIC ARM CONTROL SYSTEM</span>
 
                 <h3>
-                  ROBOT NAME
+                  ICARO
                 </h3>
               </div>
 
@@ -409,6 +410,13 @@ function App() {
                 </p>
               </div>
 
+              <div className="project-image">
+                <img
+                  src={icaroProject}
+                  alt="ICARO 6-DOF Robotic Arm"
+                />
+              </div>
+
             </div>
 
 
@@ -423,7 +431,7 @@ function App() {
               </div>
 
               <span className="project-status">
-                STATUS: EARLY DEVELOPMENT
+                STATUS: INITIAL MOTOR TESTS
               </span>
 
             </div>
