@@ -209,6 +209,14 @@
   object-fit: cover;
 }
 
+.project-image-small {
+  width: 50% !important;
+  max-width: 650px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
 
 /* =========================
    CONTRIBUTION
@@ -224,6 +232,7 @@
   font-size: 17px;
   line-height: 1.7;
 }
+
 
 
 /* =========================

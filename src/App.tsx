@@ -414,6 +414,7 @@ function App() {
                 <img
                   src={icaroProject}
                   alt="ICARO 6-DOF Robotic Arm"
+                  className="project-image-small"
                 />
               </div>
 
