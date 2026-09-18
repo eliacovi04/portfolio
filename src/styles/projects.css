@@ -184,6 +184,31 @@
   letter-spacing: 0.15em;
 }
 
+/* =========================
+   PROJECT IMAGE
+   ========================= */
+
+.project-image {
+  min-height: 175px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(140, 191, 197, 0.17);
+
+  border-radius: 26px;
+}
+
+.project-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
 
 /* =========================
    CONTRIBUTION
@@ -318,77 +343,7 @@
 
 @media (max-width: 700px) {
 
-  .projects-section {
-    padding:
-      95px
-      3px
-      110px;
-  }
 
-  .projects-title {
-    margin-bottom: 50px;
-  }
-
-  .project-card {
-    padding: 32px 20px;
-
-    border-radius: 30px;
-  }
-
-  .project-card-top {
-    align-items: flex-start;
-
-    gap: 15px;
-  }
-
-  .project-header {
-    margin-top: 32px;
-  }
-
-  .project-description {
-    margin:
-      35px
-      0
-      40px;
-
-    font-size: 14px;
-  }
-
-  .pipeline-flow {
-    align-items: flex-start;
-    flex-direction: column;
-
-    gap: 10px;
-  }
-
-  .pipeline-arrow {
-    transform: rotate(90deg);
-  }
-
-  .project-bottom {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .project-detail-block {
-  padding: 24px 18px;
-  }
-  
-  .project-contribution-text {
-  max-width: none;
-  width: 100%;
-  }
-
-  .project-contribution-text {
-  max-width: 520px;
-
-  margin: 0;
-
-  color: var(--text-muted);
-
-  font-size: 14px;
-  line-height: 1.7;
-}
 
   .project-card-top,
   .project-header,

@@ -7,6 +7,7 @@ import './styles/skills.css'
 import './styles/projects.css'
 import { SiGmail } from 'react-icons/si'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import borisProject from './assets/boris_project.png'
 
 
 function App() {
@@ -300,6 +301,13 @@ function App() {
                   the C data structures defined by the firmware team. I also worked on the
                   database writing pipeline that persists the decoded data.
                 </p>
+              </div>
+
+              <div className="project-image">
+                <img
+                  src={borisProject}
+                  alt="BORIS Formula SAE telemetry system"
+                />
               </div>
 
             </div>
