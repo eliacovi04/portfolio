@@ -764,7 +764,7 @@ function App() {
             <div className="contact-links">
 
               <a
-                href="mailto:TUAMAIL@gmail.com"
+                href="mailto:eliacovi2004@gmail.com"
                 className="contact-social gmail"
                 aria-label="Email"
               >
@@ -772,7 +772,7 @@ function App() {
               </a>
 
               <a
-                href="TUO-LINK-LINKEDIN"
+                href="https://www.linkedin.com/in/elia-covi"
                 className="contact-social linkedin"
                 target="_blank"
                 rel="noreferrer"
@@ -782,7 +782,7 @@ function App() {
               </a>
 
               <a
-                href="TUO-LINK-GITHUB"
+                href="https://github.com/eliacovi04"
                 className="contact-social github"
                 target="_blank"
                 rel="noreferrer"
