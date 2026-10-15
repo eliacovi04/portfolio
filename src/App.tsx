@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import unitsLogo from './assets/logo_units.png'
 import aboutPhoto from './assets/elia_about.jpg'
 import './styles/contact.css'
@@ -15,7 +15,7 @@ function App() {
 
   const [activeSection, setActiveSection] = useState('home')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const projectCarouselRef = useRef<HTMLDivElement | null>(null)
+  const projectCarouselRef = useRef<HTMLDivElement>(null)
   const [activeProject, setActiveProject] = useState(0)
 
     const updateActiveProject = () => {
@@ -23,8 +23,8 @@ function App() {
       if (!carousel) return
 
       const cards = carousel.querySelectorAll('.project-card')
-      const center = carousel.getBoundingClientRect().left +
-                    carousel.getBoundingClientRect().width / 2
+      const rect = carousel.getBoundingClientRect();
+      const center = rect.left + rect.width / 2;
 
       let closestIndex = 0
       let closestDistance = Infinity
