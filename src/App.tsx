@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import unitsLogo from './assets/logo_units.png'
 import aboutPhoto from './assets/elia_about.jpg'
 import './styles/contact.css'
@@ -15,7 +15,35 @@ function App() {
 
   const [activeSection, setActiveSection] = useState('home')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const projectCarouselRef = useRef(null)
+  const [activeProject, setActiveProject] = useState(0)
 
+    const updateActiveProject = () => {
+      const carousel = projectCarouselRef.current
+      if (!carousel) return
+
+      const cards = carousel.querySelectorAll('.project-card')
+      const center = carousel.getBoundingClientRect().left +
+                    carousel.getBoundingClientRect().width / 2
+
+      let closestIndex = 0
+      let closestDistance = Infinity
+
+      cards.forEach((card, index) => {
+        const rect = card.getBoundingClientRect()
+        const cardCenter = rect.left + rect.width / 2
+        const distance = Math.abs(center - cardCenter)
+
+        if (distance < closestDistance) {
+          closestDistance = distance
+          closestIndex = index
+        }
+      })
+
+      setActiveProject(previous =>
+        previous === closestIndex ? previous : closestIndex
+      )
+    }
   useEffect(() => {
     const sectionIds = [
       'home',
@@ -216,7 +244,7 @@ function App() {
             VIEW PROJECTS ↓
           </a>
         </section>
-
+/*PROJECTS SECTION*/
         <section id="projects" className="projects-section">
 
           <div className="section-label">
@@ -228,217 +256,96 @@ function App() {
 
           <h2 className="projects-title">PROJECTS</h2>
 
+          
 
-          <article className="project-card">
+            <div
+              className="projects-carousel"
+              ref={projectCarouselRef}
+              onScroll={updateActiveProject}
+            >
 
-            {/* MOBILE VERSION */}
-            <div className="project-mobile">
-              <span className="project-mobile-index">
-                01 / UNITS RACING TEAM
-              </span>
+              <div className="projects-carousel-track">
 
-              <h3>BORIS</h3>
+                <article
+                  className={`project-card ${
+                    activeProject === 0 ? 'is-active' : ''
+                  }`}
+                >
+                  <div className="project-card-top">
+                    <span>01 / UNITS RACING TEAM</span>
+                    <span>OCTOBER 2025 — PRESENT</span>
+                  </div>
 
-              <span className="project-mobile-name">
-                FORMULA SAE VEHICLE TELEMETRY SYSTEM
-              </span>
+                  <div className="project-preview-header">
+                    <span className="project-name">
+                      FORMULA SAE VEHICLE TELEMETRY SYSTEM
+                    </span>
 
-              <p>
-                Embedded telemetry system for real-time vehicle data
-                acquisition, decoding and persistence.
-              </p>
+                    <h3>BORIS</h3>
+                  </div>
 
-              <span className="project-mobile-link">
-                VIEW PROJECT →
-              </span>
-            </div>
+                  <div className="project-preview-content">
+                    <p className="project-preview-description">
+                      Embedded telemetry system for real-time vehicle data
+                      acquisition, decoding and persistence.
+                    </p>
 
-            {/* TOP */}
-            <div className="project-card-top">
-              <span>01 / UNITS RACING TEAM</span>
-              <span>October 2025 — PRESENT</span>
-            </div>
+                    <div className="project-preview-image">
+                      <img
+                        src={borisProject}
+                        alt="BORIS Formula SAE telemetry system"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="project-preview-bottom">
+                    <span className="project-preview-link">
+                      VIEW PROJECT →
+                    </span>
+                  </div>
+                </article>
 
 
-            {/* HEADER */}
-            <div className="project-header">
+                <article
+                  className={`project-card ${
+                    activeProject === 1 ? 'is-active' : ''
+                  }`}
+                >
+                  <div className="project-card-top">
+                    <span>02 / UNITS NEXUS ROBOTICS</span>
+                    <span>JULY 2026 — PRESENT</span>
+                  </div>
 
-              <div>
-                <span className="project-name">FORMULA SAE VEHICLE TELEMETRY SYSTEM</span>
+                  <div className="project-preview-header">
+                    <span className="project-name">
+                      5-DOF ROBOTIC ARMS TELEOPERATION SYSTEM
+                    </span>
 
-                <h3>
-                  BORIS
-                </h3>
+                    <h3>DEDALO & ICARO</h3>
+                  </div>
+
+                  <div className="project-preview-content">
+                    <p className="project-preview-description">
+                      Teleoperation system in which DEDALO is manually controlled
+                      and ICARO reproduces its movements through software.
+                    </p>
+
+                    <div className="project-preview-image">
+                      <img
+                        src={icaroProject}
+                        alt="DEDALO and ICARO robotic arms"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="project-preview-bottom">
+                    <span className="project-preview-link">
+                      VIEW PROJECT →
+                    </span>
+                  </div>
+                </article>
               </div>
-
-              <span className="project-role">
-                EMBEDDED SOFTWARE DEVELOPER
-              </span>
-
             </div>
-
-
-            {/* DESCRIPTION */}
-            <p className="project-description">
-              Embedded telemetry software running on the vehicle's Raspberry Pi.
-              BORIS acquires raw data from the electronic boards, converts byte
-              streams into structured telemetry, persists them into a session
-              database and makes the data available to the visualization client.
-            </p>
-
-
-            {/* DETAILS */}
-            <div className="project-details">
-
-              <div className="project-detail-block">
-
-                <span className="project-detail-label">
-                  MY CONTRIBUTION
-                </span>
-
-                <p className="project-contribution-text">
-                  I contributed to the database architecture and developed board-specific
-                  devices that map incoming byte arrays into structured entities, following
-                  the C data structures defined by the firmware team. I also worked on the
-                  database writing pipeline that persists the decoded data.
-                </p>
-              </div>
-
-              <div className="project-image">
-                <img
-                  src={borisProject}
-                  alt="BORIS Formula SAE telemetry system"
-                />
-              </div>
-
-            </div>
-
-
-            {/* BOTTOM */}
-            <div className="project-bottom">
-
-              <div className="project-stack">
-                <span>C#</span>
-                <span>.NET</span>
-                <span>RASPBERRY PI</span>
-                <span>SQLITE</span>
-                <span>EF CORE</span>
-              </div>
-
-              <span className="project-status">
-                STATUS: VEHICLE INTEGRATION & TESTING
-              </span>
-
-            </div>
-
-          </article>
-
-          <article className="project-card">
-
-            {/* MOBILE VERSION */}
-              <div className="project-mobile">
-                <span className="project-mobile-index">
-                  02 / UNITS NEXUS ROBOTICS
-                </span>
-
-                <h3>ICARO</h3>
-
-                <span className="project-mobile-name">
-                  6-DOF ROBOTIC ARM CONTROL SYSTEM
-                </span>
-
-                <p>
-                  Software for kinematics, motion control and physical
-                  actuation of a 6-DOF robotic arm.
-                </p>
-
-                <span className="project-mobile-link">
-                  VIEW PROJECT →
-                </span>
-              </div>
-
-            {/* TOP */}
-            <div className="project-card-top">
-              <span>02 / UNITS NEXUS ROBOTICS</span>
-              <span>July 2026 — PRESENT</span>
-            </div>
-
-
-            {/* HEADER */}
-            <div className="project-header">
-
-              <div>
-                <span className="project-name">6-DOF ROBOTIC ARM CONTROL SYSTEM</span>
-
-                <h3>
-                  ICARO
-                </h3>
-              </div>
-
-              <span className="project-role">
-                ROBOTICS SOFTWARE DEVELOPER
-              </span>
-
-            </div>
-
-
-            {/* DESCRIPTION */}
-            <p className="project-description">
-              Early-stage development of a 6-DOF robotic arm designed as a learning
-              platform for robotic motion and control. The system uses a Raspberry Pi
-              to receive target poses from a client, compute the corresponding joint
-              angles and translate them into physical motor commands.
-            </p>
-
-
-            {/* DETAILS */}
-            <div className="project-details">
-
-              <div className="project-detail-block">
-
-                <span className="project-detail-label">
-                  MY CONTRIBUTION
-                </span>
-
-                <p className="project-contribution-text">
-                  I am working on the software layer that translates target poses into
-                  physical arm movement. So far, I have studied the motor vendor's
-                  public codebase, developed test scripts for motor actuation and
-                  successfully tested individual motor movement. I am also beginning
-                  to work on inverse kinematics, with the goal of converting desired
-                  end-effector poses into joint angles that can be sent to the motors.
-                </p>
-              </div>
-
-              <div className="project-image">
-                <img
-                  src={icaroProject}
-                  alt="ICARO 6-DOF Robotic Arm"
-                  className="project-image-small"
-                />
-              </div>
-
-            </div>
-
-
-            {/* BOTTOM */}
-            <div className="project-bottom">
-
-              <div className="project-stack">
-                <span>PYTHON</span>
-                <span>RASPBERRY PI</span>
-                <span>ROBOTICS</span>
-                <span>INVERSE KINEMATICS</span>
-              </div>
-
-              <span className="project-status">
-                STATUS: INITIAL MOTOR TESTS
-              </span>
-
-            </div>
-
-          </article>
-
         </section>
 
         <section className="experience-section" id="experience">
