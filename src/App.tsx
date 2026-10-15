@@ -560,14 +560,25 @@ function App() {
 
           <div className="skills-list">
 
+            <div className="about-text">
+
+                <p>
+                  These are technologies I have worked with hands-on through 
+                  academic projects and coursework. While I may not use 
+                  all of them regularly today, <strong>my practical experience 
+                  allows me to quickly refresh and apply them when needed.</strong>
+                </p>
+
+              </div>
+
             <div className="skill-capsules">
 
-              {/* PROGRAMMING */}
-              <div className="skill-capsule programming-capsule">
+              {/* PROGRAMMING LANGUAGES */}
+              <div className="skill-capsule technologies-capsule">
 
                 <div className="skill-capsule-title">
                   <span>01</span>
-                  <h3>PROGRAMMING</h3>
+                  <h3>PROGRAMMING LANGUAGES</h3>
                 </div>
 
                 <div className="skill-icons">
@@ -580,6 +591,10 @@ function App() {
                     <img src="/icons/cs-logo.jpg" alt="C#" />
                   </div>
 
+                  <div className="skill-icon-item" data-name="Python">
+                    <img src="/icons/python-logo.png" alt="Python" />
+                  </div>
+
                   <div className="skill-icon-item" data-name="Java">
                     <img src="/icons/j-logo.png" alt="Java" />
                   </div>
@@ -589,26 +604,43 @@ function App() {
                   </div>
 
                 </div>
-
               </div>
 
-
-              {/* TECHNOLOGIES */}
               <div className="skill-capsule technologies-capsule">
 
                 <div className="skill-capsule-title">
                   <span>02</span>
-                  <h3>TECHNOLOGIES &amp; TOOLS</h3>
+                  <h3>ENGINEERING &amp; ROBOTICS</h3>
                 </div>
 
                 <div className="skill-icons">
 
-                  <div className="skill-icon-item" data-name=".NET">
-                    <img src="/icons/net.jpg" alt=".NET" />
+                  <div className="skill-icon-item" data-name="MATLAB">
+                    <img src="/icons/Matlab_Logo.png" alt="MATLAB" />
                   </div>
+
+                  <div className="skill-icon-item" data-name="Robotics Toolbox for Python">
+                    <img src="/icons/RTP-logo.png" alt="Robotics Toolbox for Python" />
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="skill-capsule technologies-capsule">
+
+                <div className="skill-capsule-title">
+                  <span>03</span>
+                  <h3>TECHNOLOGIES &amp; PLATFORMS</h3>
+                </div>
+
+                <div className="skill-icons">
 
                   <div className="skill-icon-item" data-name="Raspberry Pi">
                     <img src="/icons/raspberry.png" alt="Raspberry Pi" />
+                  </div>
+
+                  <div className="skill-icon-item" data-name=".NET">
+                    <img src="/icons/net.jpg" alt=".NET" />
                   </div>
 
                   <div className="skill-icon-item" data-name="SQLite">
@@ -616,7 +648,6 @@ function App() {
                   </div>
 
                 </div>
-
               </div>
 
             </div>
