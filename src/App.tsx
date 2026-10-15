@@ -15,7 +15,7 @@ function App() {
 
   const [activeSection, setActiveSection] = useState('home')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const projectCarouselRef = useRef(null)
+  const projectCarouselRef = useRef<HTMLDivElement | null>(null)
   const [activeProject, setActiveProject] = useState(0)
 
     const updateActiveProject = () => {
