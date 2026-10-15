@@ -616,11 +616,11 @@ function App() {
                 <div className="skill-icons">
 
                   <div className="skill-icon-item" data-name="MATLAB">
-                    <img src="/icons/Matlab_Logo.png" alt="MATLAB" />
+                    <img src="/icons/matlab_logo.png" alt="MATLAB" />
                   </div>
 
                   <div className="skill-icon-item" data-name="Robotics Toolbox for Python">
-                    <img src="/icons/RTP-logo.png" alt="Robotics Toolbox for Python" />
+                    <img src="/icons/rtp-logo.png" alt="Robotics Toolbox for Python" />
                   </div>
 
                 </div>
