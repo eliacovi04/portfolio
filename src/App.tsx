@@ -244,7 +244,7 @@ function App() {
             VIEW PROJECTS ↓
           </a>
         </section>
-/*PROJECTS SECTION*/
+
         <section id="projects" className="projects-section">
 
           <div className="section-label">
@@ -541,6 +541,10 @@ function App() {
                 </div>
 
                 <div className="skill-icons">
+
+                  <div className="skill-icon-item" data-name="Git">
+                    <img src="/icons/Git_icon.png" alt="Git" />
+                  </div>
 
                   <div className="skill-icon-item" data-name="Raspberry Pi">
                     <img src="/icons/raspberry.png" alt="Raspberry Pi" />
