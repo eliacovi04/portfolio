@@ -273,7 +273,7 @@ function App() {
                 >
                   <div className="project-card-top">
                     <span>01 / UNITS RACING TEAM</span>
-                    <span>OCTOBER 2025 — PRESENT</span>
+                    <span>OCTOBER 2025 — AUGUST 2026</span>
                   </div>
 
                   <div className="project-preview-header">
@@ -346,6 +346,11 @@ function App() {
                 </article>
               </div>
             </div>
+
+            <div className="projects-scroll-hint">
+              <span>SWIPE TO EXPLORE</span>
+            </div>
+
         </section>
 
         <section className="experience-section" id="experience">

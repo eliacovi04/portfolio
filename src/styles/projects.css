@@ -322,3 +322,21 @@
   font-weight: 700;
   letter-spacing: 0.13em;
 }
+
+.projects-scroll-hint {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--ice-dark);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.projects-scroll-arrow {
+  font-size: 12px;
+  font-weight: 400;
+}
