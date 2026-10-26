@@ -306,7 +306,7 @@ function App() {
                   <div className="project-preview-bottom">
                     <a
                       className="project-preview-link"
-                      href="/projects/boris"
+                      href="/pages/boris"
                     >
                       VIEW PROJECT →
                     </a>
