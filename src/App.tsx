@@ -9,6 +9,7 @@ import { SiGmail } from 'react-icons/si'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import borisProject from './assets/boris_project.png'
 import icaroProject from './assets/Icaro_project.png'
+import Boris from './pages/Boris'
 
 
 function App() {
@@ -84,6 +85,10 @@ function App() {
       window.removeEventListener('resize', updateActiveSection)
     }
   }, [])
+
+  if (window.location.pathname.replace(/\/$/, '') === '/projects/boris') {
+    return <Boris />
+  }
 
   return (
     <>
@@ -299,9 +304,12 @@ function App() {
                   </div>
 
                   <div className="project-preview-bottom">
-                    <span className="project-preview-link">
+                    <a
+                      className="project-preview-link"
+                      href="/projects/boris"
+                    >
                       VIEW PROJECT →
-                    </span>
+                    </a>
                   </div>
                 </article>
 
