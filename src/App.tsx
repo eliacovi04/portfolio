@@ -10,6 +10,7 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import borisProject from './assets/boris_project.png'
 import icaroProject from './assets/Icaro_project.png'
 import Boris from './pages/Boris'
+import DedaloIcaro from './pages/DedaloIcaro'
 
 
 function App() {
@@ -88,6 +89,10 @@ function App() {
 
   if (window.location.pathname.replace(/\/$/, '') === '/projects/boris') {
     return <Boris />
+  }
+
+  if (window.location.pathname.replace(/\/$/, '') === '/projects/dedalo-icaro') {
+    return <DedaloIcaro />
   }
 
   return (
@@ -321,7 +326,7 @@ function App() {
                 >
                   <div className="project-card-top">
                     <span>02 / UNITS NEXUS ROBOTICS</span>
-                    <span>JULY 2026 — PRESENT</span>
+                    <span>JULY 2026 — OCTOBER 2026</span>
                   </div>
 
                   <div className="project-preview-header">
@@ -347,9 +352,12 @@ function App() {
                   </div>
 
                   <div className="project-preview-bottom">
-                    <span className="project-preview-link">
+                    <a
+                      className="project-preview-link"
+                      href="/projects/dedalo-icaro"
+                    >
                       VIEW PROJECT →
-                    </span>
+                    </a>
                   </div>
                 </article>
               </div>

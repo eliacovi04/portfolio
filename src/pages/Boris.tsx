@@ -212,7 +212,7 @@ function Boris() {
         {/* 04 — RESULTS & REFLECTIONS */}
         <section className="boris-section boris-final-section" id="results">
           <div className="boris-section-heading">
-            <span>04 / OUTCOME</span>
+            <span>03 / OUTCOME</span>
             <h2>RESULTS &amp; REFLECTIONS</h2>
           </div>
 
