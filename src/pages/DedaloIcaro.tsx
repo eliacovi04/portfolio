@@ -1,4 +1,4 @@
-import dedaloIcaroProject from '../assets/icaro_project.png'
+import dedaloIcaroProject from '../assets/Icaro_project.png'
 import '../styles/dedaloicaro.css'
 
 function DedaloIcaro() {
